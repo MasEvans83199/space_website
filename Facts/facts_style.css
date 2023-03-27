@@ -1,0 +1,159 @@
+@font-face{
+    font-family: "Orbitron";
+    src: url("Fonts/static/Orbitron-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    background-image: url("stellar/trans_space_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Orbitron", sans-serif;
+}
+h1 {
+    text-align: center;
+    color: #752e65;
+    -webkit-text-stroke-color: #000000;
+    -webkit-text-stroke-width: 1px;
+}
+h2 {
+    text-align: center;
+    color: #315cf9;
+}
+h3{
+    text-align: center;
+    font-size: 30px;
+}
+
+li{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.list-img{
+    margin: 2px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+a {
+    text-decoration: none;
+}
+.header{
+    border-bottom: 1px solid #2b2929;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #180347;
+}
+.hamburger{
+    display: none;
+}
+.bar{
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-item{
+    margin-left: 5rem;
+}
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #752e65;
+}
+.nav-link:hover{
+    color: #af238e;
+}
+.nav-logo{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0a0ec2;
+}
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        right: -110%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #333131;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.5s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+
+.collapsible {
+    background-color: #4f4fff;
+    color: #000000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.active, .collapsible:hover {
+    background-color: #7878f5;
+}
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #060606;
+}
+
+footer{
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+}
