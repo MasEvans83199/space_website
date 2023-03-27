@@ -1,0 +1,323 @@
+@font-face{
+    font-family: "Orbitron";
+    src: url("Fonts/static/Orbitron-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+body{
+    font-family: "Orbitron", sans-serif;
+    margin: 0;
+    background-image: url("stellar/trans_space_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    background-color: #000000;
+    color: #ffffff;
+}
+h1 {
+    text-align: center;
+    color: #752e65;
+    -webkit-text-stroke-color: #000000;
+    -webkit-text-stroke-width: 1px;
+    font-size: 28px;
+}
+h2 {
+    text-align: center;
+    color: #f9f9fa;
+    -webkit-text-stroke-color: #000000;
+    -webkit-text-stroke-width: 1px;
+}
+h3{
+    font-family: "Orbitron", sans-serif;
+    color: #d1b819;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 3vw;
+    line-height: 1.2;
+    font-size: 3vw;
+    text-align: center;
+}
+
+
+a {
+    text-decoration: none;
+}
+.header{
+    border-bottom: 1px solid #2b2929;
+}
+li{
+    list-style: none;
+}
+.wrapper{
+    width: 100%;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+}
+.grid-cols-2{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+.grid-item-1{
+    padding-top: 5rem;
+    padding-left: 1.5rem;
+}
+.main-heading{
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 55px;
+}
+.main-heading span{
+    color: var( - primary-color);
+}
+.info-text{
+    margin-top: 1.5rem;
+    font-size: 20px;
+    line-height: 30px;
+    color: #947f09;
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 1px;
+}
+.grid-item-2{
+    width: 100%;
+    height: 100%;
+}
+.team-img-wrapper{
+    width: 500px;
+    max-width: 100%;
+    height: 440px;
+}
+.team-img-wrapper img{
+    width: 125%;
+    height: 125%;
+    object-fit: contain;
+}
+
+.grid-cols-3{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 2rem;
+    padding: 1rem;
+}
+.grid-col-item{
+    height: 100%;
+}
+.featured-info{
+    padding: 5px;
+    margin: 5px;
+    border: 5px groove #36010100;
+    display: inline-block;
+}
+.featured-info span{
+    width: 100%;
+    display: block;
+    font-size: 21px;
+    line-height: 33px;
+    color: #c3c1ba;
+}
+.featured-info p{
+    display: block;
+    width: 50%;
+    margin-top: 7px;
+    font-weight: 400;
+    color: #947f09;
+    line-height: 25px;
+    font-size: 15.5px;
+}
+.secondary-content{
+    display: flex;
+    flex-direction: column;
+
+}
+.secondary-content button{
+    display: block;
+    background-color: #180347;
+    box-shadow: 0 5px #0a011d;
+    color: #947f09;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: 2px groove #110233;
+}
+.secondary-content button:hover{
+    background-color: #14003d;
+    color: #947f09;
+}
+footer{
+    width: 100%;
+    height: 12px;
+    margin-top: 8rem;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #180347;
+}
+.hamburger{
+    display: none;
+}
+.bar{
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-item{
+    margin-left: 5rem;
+}
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #752e65;
+}
+.nav-link:hover{
+    color: #af238e;
+}
+.nav-logo{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0a0ec2;
+}
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        right: -110%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #333131;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.5s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .wrapper{
+        padding: 0 0.7rem;
+    }
+    .grid-item-1{
+        padding-left: 0rem;
+    }
+    .main-heading{
+        font-size: 35px;
+    }
+    .grid-cols-3{
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+    .featured-info{
+        line-height: 25px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 991px){
+    .wrapper{
+        padding-top: 3rem;
+    }
+    .grid-cols-2{
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+    .grid-item-1{
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+    }
+    .main-heading{
+        font-size: 32px;
+        text-align: center;
+        line-height: 40px;
+    }
+    .info-text{
+        font-size: 16px;
+        text-align: center;
+        padding: 0.7rem;
+    }
+    .grid-item-2{
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .team-img-wrapper{
+        width: 350px;
+        height: 350px;
+    }
+    .featured-info span{
+        font-size: 19px;
+    }
+}
+
+.collapsible {
+    background-color: #4f4fff;
+    color: #000000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.active, .collapsible:hover {
+    background-color: #7878f5;
+}
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #060606;
+}
+.description{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+}
